@@ -1,0 +1,37 @@
+{
+  "name": "test-auto-update",
+  "version": "1.0.5",
+  "description": "Testing auto update",
+  "main": "main.js",
+  "build": {
+    "appId": "test-auto-update"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "predist": "npm run build",
+    "dist": "build",
+    "prerelease": "npm run build",
+    "release": "build",
+    "prestart": "npm run build",
+    "start": "electron main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anmo/test-auto-update.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anmo/test-auto-update/issues"
+  },
+  "homepage": "https://github.com/Anmo/test-auto-update#readme",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^11.5.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "electron-updater": "^1.1.1"
+  }
+}
