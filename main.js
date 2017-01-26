@@ -43,6 +43,7 @@ var createWindow = function () {
     if (mainWindow) {
       console.log('notify', 'autoUpdater.signals.updateDownloaded')
       mainWindow.webContents.send('notify', 'autoUpdater.signals.updateDownloaded')
+      autoUpdater.quitAndInstall()
     }
   })
   autoUpdater.on('error', console.log.bind(console, 'error'))
